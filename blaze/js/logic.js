@@ -2,8 +2,7 @@
 
 $(document).keypress(function (e) {
     if (e.which == 49) {
-    	document.getElementById("video_box").style.display = "block";
-    	document.getElementById("videobox_stories").style.display = "none";
+    	
         vidplay();
         
     }
@@ -11,8 +10,7 @@ $(document).keypress(function (e) {
 
 $(document).keypress(function (e) {
     if (e.which == 50) {
-    	document.getElementById("video_box").style.display = "none";
-    	document.getElementById("videobox_stories").style.display = "block";
+    
         vidplayStories();
 
     }
@@ -20,6 +18,9 @@ $(document).keypress(function (e) {
 
 function vidplay() {
     	var video = document.getElementById("Video1");
+
+    	document.getElementById("video_box").style.display = "block";
+    	document.getElementById("videobox_stories").style.display = "none";
     
        if (video.paused) {
           video.play();
@@ -32,6 +33,9 @@ function vidplay() {
 
 function vidplayStories() {
     	var video = document.getElementById("Video2");
+
+    		document.getElementById("video_box").style.display = "none";
+    	document.getElementById("videobox_stories").style.display = "block";
     
        if (video.paused) {
           video.play();
